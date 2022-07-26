@@ -12,6 +12,7 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            //veri tabanı bağlantısı
             optionsBuilder.UseSqlServer("server=(localdb)\\MSSQLLocalDB; database=CoreBlogDb; integrated security=true;");
         }
             public DbSet<About> Abouts { get; set; }
