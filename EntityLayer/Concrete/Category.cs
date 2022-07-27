@@ -15,5 +15,7 @@ namespace EntityLayer.Concrete
         public string CategoryDescription { get; set; }
         public bool CategoryStatus { get; set; }
 
+        // category ile blog arasında ilişki oluşturmak için
+        public List<Blog> Blogs { get; set; } 
     }
 }
