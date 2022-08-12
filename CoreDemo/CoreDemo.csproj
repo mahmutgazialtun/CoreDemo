@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <Folder Include="Views\Home\" />
+    <Folder Include="wwwroot\weberror\Core404Page-main\bicycle-error-page_web_Free20-12-2019_162184719\" />
   </ItemGroup>
 
 </Project>
