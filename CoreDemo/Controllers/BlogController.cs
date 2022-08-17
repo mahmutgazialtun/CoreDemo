@@ -67,8 +67,7 @@ namespace CoreDemo.Controllers
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
             }
-            return View();
-            
+            return View();            
         }
         public IActionResult DeleteBlog(int id)
         {
