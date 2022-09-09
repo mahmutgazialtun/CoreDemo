@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace CoreDemo.Areas.Admin.ViewComponents.Statictic
 {
@@ -18,6 +19,11 @@ namespace CoreDemo.Areas.Admin.ViewComponents.Statictic
             ViewBag.v1 = bm.GetList().Count();
             ViewBag.v2 = c.Contacts.Count();
             ViewBag.v3 = c.Comments.Count();
+
+            string api = "e27a0e67a36ddedcc769dda5db0dc3e4";
+            string connection = "https://api.openweathermap.org/data/2.5/weather?q=adiyaman&mode=xml&lang=tr&units=metric&appid=" + api;
+            XDocument document = XDocument.Load(connection);
+            ViewBag.v4 = document.Descendants("temperature").ElementAt(0).Attribute("value").Value;
             return View();
         }
     }
